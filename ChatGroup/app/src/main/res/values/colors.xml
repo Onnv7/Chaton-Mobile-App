@@ -10,4 +10,6 @@
     <color name="login_edt_color">#F1F1F1</color>
     <color name="primary_color">#F51212</color>
     <color name="red_pink">#E12550</color>
+    <color name="red_light">#FAB1B1</color>
+    <color name="secondary_color">#48E2F6</color>
 </resources>
