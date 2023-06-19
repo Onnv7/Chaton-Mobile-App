@@ -15,8 +15,8 @@ public class UserInfoDto {
     private String name;
     private String email;
 
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    private String password;
+//    @JsonInclude(JsonInclude.Include.NON_NULL)
+//    private String password;
     private String avatar;
     private User.Gender gender;
     private String phone;

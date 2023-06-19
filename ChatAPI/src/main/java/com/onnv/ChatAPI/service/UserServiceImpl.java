@@ -32,7 +32,6 @@ public class UserServiceImpl implements UserService{
         User newUser = userRepository.save(userInfo);
         UserInfoDto userDto = modelMapper.map(userInfo, UserInfoDto.class);
         if(newUser != null) {
-            userDto.setPassword(null);
             userDto.setId(newUser.getId());
             return userDto;
         } else {

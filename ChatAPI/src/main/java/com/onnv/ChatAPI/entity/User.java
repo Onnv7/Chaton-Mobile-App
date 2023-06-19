@@ -48,7 +48,7 @@ public class User {
 
 
     @Temporal(TemporalType.DATE)
-    @Column(name = "birth_date", nullable = false)
+    @Column(name = "birth_date")
     private Date birthDate;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)

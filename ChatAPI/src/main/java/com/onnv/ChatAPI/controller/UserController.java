@@ -52,7 +52,7 @@ public class UserController {
             Object existedUser = userService.login(user);
             ApiResponse response = new ApiResponse();
             if(existedUser instanceof UserInfoDto)
-                response = new ApiResponse(false, "Login success", existedUser);
+                response = new ApiResponse(true, "Login success", existedUser);
             else if (existedUser instanceof String){
                 response = new ApiResponse(false, existedUser.toString(), null);
             }

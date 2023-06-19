@@ -21,24 +21,38 @@ class ChatActivity : AppCompatActivity() {
         binding = ActivityChatBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val rcvChatList : RecyclerView = binding.rcvMessageChat
-        val chatList : List<Objects> = getDataChat()
+        val chatList : List<Any> = getDataChat()
+
 
         val chatAdapter : ChatAdapter = ChatAdapter(chatList, this)
         rcvChatList.adapter = chatAdapter
+
         val layout : LinearLayoutManager = LinearLayoutManager(this)
         rcvChatList.layoutManager = layout
 
     }
 
-    private fun <T> getDataChat() : List<T> {
-        val list : MutableList<T> = mutableListOf()
+    private fun getDataChat() : List<Any> {
+        val itemList = listOf(
+            MyMessage("Hell452452o", "AT"),
+            MyMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            FriendMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            FriendMessage("sadasd", "AT"),
+            MyMessage("Hello", "AT"),
 
-        list.add(MyMessage("Hello", "AT") as T)
-        list.add(MyMessage("Hello", "AT") as T)
-        list.add(FriendMessage("Hello", "AT") as T)
-        list.add(MyMessage("Hello", "AT") as T)
-        list.add(FriendMessage("Hello", "AT") as T)
-        list.add(FriendMessage("Hello", "AT") as T)
-        return list
+            MyMessage("Hell452452o", "AT"),
+            MyMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            FriendMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            FriendMessage("sadasd", "AT"),
+            FriendMessage("sadasd", "AT"),
+            MyMessage("Hello", "AT"),
+
+            MyMessage("Hell452452o", "AT"),
+            MyMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            FriendMessage("Helldsffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffo", "AT"),
+            MyMessage("Hello", "AT"),
+
+            )
+        return itemList
     }
 }

@@ -14,7 +14,7 @@
     <fragment
         android:id="@+id/nav_setting"
         android:name="com.hcmute.chatgroup.activity.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
+        android:label="lmoa"
         tools:layout="@layout/fragment_gallery" />
 
     <fragment
